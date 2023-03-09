@@ -1,21 +1,24 @@
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage';
+
+const paths = lazy(() => import ('../router/paths'));
+const Home = lazy(() => import('../components/Home/Home'));
+const Movies = lazy(() => import('../components/Movies/Movies'));
+const MovieDetails = lazy(() => import('../components/MovieDetails/MovieDetails'));
+const Cast = lazy(() => import('../components/Cast/Cast'));
+const Reviews = lazy(() => import('../components/Reviews/Reviews'));
 
 const App = () => {
   return (
-    <Routes
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <Route path="/" element={<Homepage />}></Route>
-      
-    </Routes>
+  <Suspense>  
+    <Routes>
+      <Route path={paths.home} element={<Home />}></Route>;
+      <Route path={paths.movies} element={<Movies />}></Route>;
+      <Route path={paths.movieDetails} element={<MovieDetails />}></Route>;
+      <Route path={paths.cast} element={<Cast />}></Route>;
+      <Route path={paths.reviews} element={<Reviews />}></Route>;
+    </Routes>  
+  </Suspense>
   );
 };
 export default App;
