@@ -1,6 +1,9 @@
-export const App = () => {
+import { Routes, Route } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+
+const App = () => {
   return (
-    <div
+    <Routes
       style={{
         height: '100vh',
         display: 'flex',
@@ -10,7 +13,9 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
-    </div>
+      <Route path="/" element={<Homepage />}></Route>
+      
+    </Routes>
   );
 };
+export default App;
