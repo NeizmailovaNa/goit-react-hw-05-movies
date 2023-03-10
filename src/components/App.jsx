@@ -7,6 +7,7 @@ const Movies = lazy(() => import('../components/Movies/Movies'));
 const MovieDetails = lazy(() => import('../components/MovieDetails/MovieDetails'));
 const Cast = lazy(() => import('../components/Cast/Cast'));
 const Reviews = lazy(() => import('../components/Reviews/Reviews'));
+const NotFound = lazy(() => import('../others/NotFound/NotFound'));
 
 const App = () => {
   return (
@@ -14,9 +15,12 @@ const App = () => {
     <Routes>
       <Route path={paths.home} element={<Home />}></Route>;
       <Route path={paths.movies} element={<Movies />}></Route>;
-      <Route path={paths.movieDetails} element={<MovieDetails />}></Route>;
-      <Route path={paths.cast} element={<Cast />}></Route>;
-      <Route path={paths.reviews} element={<Reviews />}></Route>;
+      <Route path={paths.movieDetails} element={<MovieDetails />}>
+        <Route path={paths.cast} element={<Cast />}></Route>;
+        <Route path={paths.reviews} element={<Reviews />}></Route>;
+      </Route>;
+      
+      <Route path="*" element={<NotFound />}></Route>
     </Routes>  
   </Suspense>
   );
