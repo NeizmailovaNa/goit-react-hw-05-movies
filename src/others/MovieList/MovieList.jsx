@@ -1,7 +1,7 @@
 import css from './MovieList.module.css';
 import { useLocation, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import noImg from '../../img/noImg.jpg';
+import noImg from '../../img/noImg.jpeg';
 
 const MovieList = ({ moviesList }) => {
   const location = useLocation();
@@ -20,7 +20,7 @@ const MovieList = ({ moviesList }) => {
                 <img
                   src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${movie.poster_path}`}
                   alt={movie.title}
-                  width="200px"
+                  width="240px"
                 />
               )}
               {!movie.poster_path && (

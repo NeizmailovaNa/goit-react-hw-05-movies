@@ -1,10 +1,10 @@
-import SearchForm from 'components/SearchForm/SearchForm';
+import SearchForm from 'others/SearchForm/SearchForm';
 import { Outlet, useSearchParams } from 'react-router-dom';
 import { onFetchSearch } from '../../API/filmsApi';
 import { useEffect, useState } from 'react';
 import Spiner from 'others/Spiner';
 import Notiflix from 'notiflix';
-import MovieList from 'components/MovieList/MovieList';
+import MovieList from 'others/MovieList/MovieList';
 
 const Movies = () => {
   const [searchMovies, setSearchMovies] = useState(null);

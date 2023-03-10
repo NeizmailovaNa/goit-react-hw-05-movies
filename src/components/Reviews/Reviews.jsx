@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { onFetchReviews } from '../../API/filmsApi';
 import css from './Reviews.module.css';
-import Spiner from 'components/Spiner/Spiner';
-import PageNotFound from 'components/PageNotFound/PageNotFound';
+import Spiner from 'others/Spiner';
+import NotFound from 'others/NotFound/NotFound';
 
 const Reviews = () => {
   const { movieId } = useParams();
@@ -31,7 +31,7 @@ const Reviews = () => {
   return (
     <>
       {isLoading && <Spiner wrapperStyle={{ fill: '#7b81ec' }} />}
-      {error && <PageNotFound />}
+      {error && <NotFound />}
       {reviews.length === 0 && <b>Sorry, there are no reviews yet.</b>}
       <ul className={css.reviewList}>
         {reviews.map(item => {

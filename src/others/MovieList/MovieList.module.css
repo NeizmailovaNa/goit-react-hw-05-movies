@@ -1,0 +1,33 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .listItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+
+    border-radius: 10px;
+    background-color: #4f53a0;
+  }
+  
+  .listItem:hover,
+  .listLink:hover {
+    color: #000000;
+    background-image: linear-gradient(90deg,  #8a8cc2, #dfe174);
+    border-radius: 5px;
+  }
+  
+  .listLink {
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

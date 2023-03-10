@@ -1,7 +1,7 @@
-import Nav from 'components/Nav/Nav';
+import Nav from 'others/Navigation/Navigation';
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import Spiner from 'components/Spiner/Spiner';
+import Spiner from 'others/Spiner';
 import css from './SharedLayout.module.css';
 
 const SharedLayout = () => {

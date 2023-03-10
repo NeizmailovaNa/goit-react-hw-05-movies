@@ -1,7 +1,7 @@
-import { onFetch } from 'services/API';
+import { onFetch } from 'API/filmsApi';
 import { useEffect, useState } from 'react';
 import css from './Home.module.css';
-import Spiner from 'others/Spiner/Spiner';
+import Spiner from 'others/Spiner';
 import MovieList from 'others/MovieList/MovieList';
 import NotFound from 'others/NotFound/NotFound';
 

@@ -1,0 +1,12 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 100px;
+
+    font-weight: bold;
+    color: #ff0303;
+    font-size: 30px;
+};
+
